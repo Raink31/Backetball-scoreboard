@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root{
+    /* POLICES */
+
+    --ff-numbers: 'Cursed Timer ULiL', sans-serif;
+    --ff-titles: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* BASE COLORS */
+
+    --color-titles: #EEEEEE;
+    --color-points-count: #F94F6D;
+    --color-points-add: #9AABD8;
+    --bg-points-count: #080001;
+    --bg-container: #1B244A;
+}
+
+/* Container design */
+
+
+.container{
+    background-color: var(--bg-container);
+    max-width: 575px;
+    width: 100%;
+    max-height: 385px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2.5rem;
+}
+
+/* Points counter design */
+
+.points-counter{
+    text-align: center;
+}
+
+.points-counter h1{
+    font-family: var(--ff-titles);
+    color: var(--color-titles);
+    margin-bottom: 1rem;
+    font-size: 2.2em;
+}
+
+.points-counter h2{
+    font-family: var(--ff-numbers);
+    color: var(--color-points-count);
+    font-size: 5.5em;
+    height: 80px;
+}
+
+.points-container{
+    height: 120px;
+    width: 155px;
+    background-color: #080001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Buttons design */
+
+.btn-box{
+    max-width: 155px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    color: var(--color-points-add);
+    background: none;
+    border: 1px solid var(--color-points-add);
+    padding: .5rem;
+    font-family: var(--ff-numbers);
+    font-size: 1.1em;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+button:hover{
+    border: 2px solid;
+    font-weight: bold;
+}
