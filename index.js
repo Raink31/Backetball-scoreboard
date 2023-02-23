@@ -1,15 +1,45 @@
-let lapsCompleted = 0
+// Variables
 
-// Create a function that increments the lapsCompleted variable with one
-// Run it three times
+let homePointsCount = 0;
+let guestPointsCount = 0;
+let homePointsEl = document.getElementById("points-home-el")
+let guestPointsEl = document.getElementById("points-guest-el")
 
-function increment() {
-    lapsCompleted += 1
+// Fonctions
+
+function homeAdd1Point() {
+    homePointsCount += 1
+    homePointsEl.textContent = homePointsCount
 }
 
-increment()
-increment()
-increment()
+function homeAdd2Points() {
+    homePointsCount += 2
+    homePointsEl.textContent = homePointsCount
+}
 
+function homeAdd3Points() {
+    homePointsCount += 3
+    homePointsEl.textContent = homePointsCount
+}
 
-console.log(lapsCompleted)
+function guestAdd1Point() {
+    guestPointsCount += 1
+    guestPointsEl.textContent = guestPointsCount
+}
+
+function guestAdd2Points() {
+    guestPointsCount += 2
+    guestPointsEl.textContent = guestPointsCount
+}
+
+function guestAdd3Points() {
+    guestPointsCount += 3
+    guestPointsEl.textContent = guestPointsCount
+}
+
+function newGame() {
+    homePointsCount = 0;
+    guestPointsCount = 0;
+    guestPointsEl.textContent = guestPointsCount;
+    homePointsEl.textContent = homePointsCount;
+}

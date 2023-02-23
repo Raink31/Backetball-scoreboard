@@ -12,28 +12,33 @@
 </head>
 <body>
     <div class="container">
-        <div class="points-counter">
-            <h1>HOME</h1>
-            <div class="points-container">
-                <h2 id="points-home-el">0</h2>
+        <div class="score-container">
+            <div class="points-counter">
+                <h1>HOME</h1>
+                <div class="points-container">
+                    <h2 id="points-home-el">0</h2>
+                </div>
+                <div class="btn-box">
+                    <button onclick="homeAdd1Point()">+1</button>
+                    <button onclick="homeAdd2Points()">+2</button>
+                    <button onclick="homeAdd3Points()">+3</button>
+                </div>
             </div>
-            <div class="btn-box">
-                <button>+1</button>
-                <button>+2</button>
-                <button>+3</button>
+            <img src="VS.png" alt="">
+            <div class="points-counter">
+                <h1>GUEST</h1>
+                <div class="points-container">
+                    <h2 id="points-guest-el">0</h2>
+                </div>
+                <div class="btn-box">
+                    <button onclick="guestAdd1Point()">+1</button>
+                    <button onclick="guestAdd2Points()">+2</button>
+                    <button onclick="guestAdd3Points()">+3</button>
+                </div>
             </div>
         </div>
-        <div class="points-counter">
-            <h1>GUEST</h1>
-            <div class="points-container">
-                <h2 id="points-guest-el">0</h2>
-            </div>
-            <div class="btn-box">
-                <button>+1</button>
-                <button>+2</button>
-                <button>+3</button>
-            </div>
-        </div>
+        <button class="new-game-btn" onclick="newGame()">NEW GAME</button>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
