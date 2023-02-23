@@ -35,6 +35,7 @@ function guestAddPoint(a) {
 
 let minutesLabel = document.getElementById("minutes");
 let secondsLabel = document.getElementById("seconds");
+let hoursLabel = document.getElementById("hours")
 let totalSeconds = 0;
 setInterval(setTime, 1000)
 
@@ -42,7 +43,8 @@ setInterval(setTime, 1000)
 function setTime() {
     ++totalSeconds;
     secondsLabel.innerHTML = pad(totalSeconds % 60);
-    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60))
+    minutesLabel.innerHTML = pad(parseInt((totalSeconds / 60) % 60))
+    hoursLabel.innerHTML = pad(parseInt(totalSeconds / 3600) % 24)
 }
 
 function pad(val) {
