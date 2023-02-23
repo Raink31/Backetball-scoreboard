@@ -42,6 +42,7 @@ body{
     align-items: center;
     border-radius: 10px;
     border: 5px solid black;
+    justify-content: space-around;
 }
 
 img{
@@ -126,4 +127,21 @@ button:hover{
     border: 1px solid var(--color-points-count);
     color: var(--color-points-count);
     line-height: 30px;
+}
+
+/* Timer design */
+
+.timer{
+    background: #080001ab;
+    color: var(--color-points-count);
+    font-size: 1.5em;
+    padding: .5rem 3rem;
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--color-points-count);
+    line-height: 24px;
+    border-radius: 5px;
+}
+
+label {
+    font-family: var(--ff-numbers);
 }

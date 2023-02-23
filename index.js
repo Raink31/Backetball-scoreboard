@@ -7,34 +7,51 @@ let guestPointsEl = document.getElementById("points-guest-el")
 
 // Fonctions
 
-function homeAdd1Point() {
-    homePointsCount += 1
+function highlight() {
+    if (homePointsCount > guestPointsCount) {
+    homePointsEl.style.textShadow = " 0 0 20px #fd1745";
+    guestPointsEl.style.textShadow = "none";
+    } else if (homePointsCount < guestPointsCount) {
+        guestPointsEl.style.textShadow = " 0 0 20px #fd1745";
+        homePointsEl.style.textShadow = "none";
+    } else {
+        homePointsEl.style.textShadow = "none";
+        guestPointsEl.style.textShadow = "none";
+    }
+}
+
+
+function homeAddPoint(a) {
+    homePointsCount += a
     homePointsEl.textContent = homePointsCount
+    highlight()
 }
 
-function homeAdd2Points() {
-    homePointsCount += 2
-    homePointsEl.textContent = homePointsCount
-}
-
-function homeAdd3Points() {
-    homePointsCount += 3
-    homePointsEl.textContent = homePointsCount
-}
-
-function guestAdd1Point() {
-    guestPointsCount += 1
+function guestAddPoint(a) {
+    guestPointsCount += a
     guestPointsEl.textContent = guestPointsCount
+    highlight()
 }
 
-function guestAdd2Points() {
-    guestPointsCount += 2
-    guestPointsEl.textContent = guestPointsCount
+let minutesLabel = document.getElementById("minutes");
+let secondsLabel = document.getElementById("seconds");
+let totalSeconds = 0;
+setInterval(setTime, 1000)
+
+
+function setTime() {
+    ++totalSeconds;
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60))
 }
 
-function guestAdd3Points() {
-    guestPointsCount += 3
-    guestPointsEl.textContent = guestPointsCount
+function pad(val) {
+    let valString = val + "";
+    if (valString.length < 2) {
+        return "0" + valString;
+    } else {
+        return valString
+    }
 }
 
 function newGame() {
@@ -42,4 +59,9 @@ function newGame() {
     guestPointsCount = 0;
     guestPointsEl.textContent = guestPointsCount;
     homePointsEl.textContent = homePointsCount;
+    homePointsEl.style.textShadow = "none";
+    guestPointsEl.style.textShadow = "none";
+    totalSeconds = 0
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
 }

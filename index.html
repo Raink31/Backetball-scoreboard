@@ -12,6 +12,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="timer">
+            <label id="minutes">00</label> : <label id="seconds">00</label>
+        </div>
         <div class="score-container">
             <div class="points-counter">
                 <h1>HOME</h1>
@@ -19,9 +22,9 @@
                     <h2 id="points-home-el">0</h2>
                 </div>
                 <div class="btn-box">
-                    <button onclick="homeAdd1Point()">+1</button>
-                    <button onclick="homeAdd2Points()">+2</button>
-                    <button onclick="homeAdd3Points()">+3</button>
+                    <button onclick="homeAddPoint(1)">+1</button>
+                    <button onclick="homeAddPoint(2)">+2</button>
+                    <button onclick="homeAddPoint(3)">+3</button>
                 </div>
             </div>
             <img src="VS.png" alt="">
@@ -31,9 +34,9 @@
                     <h2 id="points-guest-el">0</h2>
                 </div>
                 <div class="btn-box">
-                    <button onclick="guestAdd1Point()">+1</button>
-                    <button onclick="guestAdd2Points()">+2</button>
-                    <button onclick="guestAdd3Points()">+3</button>
+                    <button onclick="guestAddPoint(1)">+1</button>
+                    <button onclick="guestAddPoint(2)">+2</button>
+                    <button onclick="guestAddPoint(3)">+3</button>
                 </div>
             </div>
         </div>
